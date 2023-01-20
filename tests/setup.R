@@ -30,6 +30,8 @@ mcbs_design <-
 	update(
 		
 		mcbs_design ,
+
+		one = 1 ,
 		
 		csp_age =
 			factor( 
@@ -130,3 +132,4 @@ mcbs_srvyr_design %>%
 mcbs_srvyr_design %>%
 	group_by( csp_age ) %>%
 	summarize( mean = survey_mean( pamtoop ) )
+stopifnot( round( coef( svytotal( ~ one , mcbs_design ) ) , 0 ) == 56307461 )
