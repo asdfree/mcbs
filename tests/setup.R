@@ -14,6 +14,9 @@ mcbs_csv <- grep( '\\.csv$' , unzipped_files , value = TRUE )
 mcbs_df <- read.csv( mcbs_csv )
 
 names( mcbs_df ) <- tolower( names( mcbs_df ) )
+# mcbs_fn <- file.path( path.expand( "~" ) , "MCBS" , "this_file.rds" )
+# saveRDS( mcbs_df , file = mcbs_fn , compress = FALSE )
+# mcbs_df <- readRDS( mcbs_fn )
 library(survey)
 
 mcbs_design <-
