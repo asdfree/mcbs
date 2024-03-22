@@ -3,7 +3,7 @@
 # utilization
 tf <- tempfile()
 
-this_url <- "https://www.cms.gov/files/zip/cspuf2019.zip"
+this_url <- "https://www.cms.gov/files/zip/cspuf2021.zip"
 
 download.file( this_url , tf , mode = 'wb' )
 
@@ -126,7 +126,7 @@ glm_result <-
 	)
 
 summary( glm_result )
-stopifnot( round( coef( svytotal( ~ one , mcbs_design ) ) , 0 ) == 56307461 )
+stopifnot( round( coef( svytotal( ~ one , mcbs_design ) ) , 0 ) == 59040948 )
 library(srvyr)
 mcbs_srvyr_design <- as_survey( mcbs_design )
 mcbs_srvyr_design %>%
